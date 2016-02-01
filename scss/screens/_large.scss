@@ -1,0 +1,127 @@
+@include breakpoint ($large) {
+
+	html {
+		font-size: 1rem;
+	}
+	.services-list {
+		li {
+			@include gallery(4);
+		}
+	}
+
+	.features-wrapper {
+		.gear {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 50%;
+				bottom: 0;
+				left: 0;
+
+				margin-right: 16.875rem;
+
+				background: #e9e9e9 url(../img/gear.png) no-repeat;
+				background-position: center right -195px;
+			}
+		}
+		.features {
+			width: span(9 wider);
+			padding-left: span(1 wider);
+			@include last;
+		}
+
+
+
+	.project-wrapper {
+		position: relative;
+		z-index: 1;
+		.ipad {
+			display: block;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 50%;
+
+			background: url(../img/iPad.png) no-repeat;
+			background-position: 20px 232px;
+		}
+	}
+
+	.developing {
+		@include span(6);
+	}
+
+	.culture-list {
+		margin-top: 88px;
+		li {
+			@include gallery(4);
+			.icon:after {
+				position: absolute;
+				top: 42px;
+				right: 75%;
+
+				width: span(7);
+
+				content: "";
+
+				border: 1px solid $third-color;
+			}
+		}
+	}
+
+	.clients-list {
+		li {
+			&:nth-child(odd) {
+				.client-quote:before {
+					border-right: 24px solid $fourth-color;
+					left: -37px;
+				}
+			}
+			&:nth-child(even) {
+				direction: rtl;
+				.client-quote:before {
+					border-left: 24px solid $fourth-color;
+					right: -37px;
+				}
+			}
+		}
+	}
+
+	.client {
+		text-align: left;
+	}
+
+	.client-quote {
+		margin: 0 2.25rem;
+		width: span(8 wide);
+		position: relative;
+		text-align: left;
+		&:before {
+			content: '';
+			border: 14px solid transparent;
+			position: absolute;
+			top: 50%;
+			margin-top: -10px;
+		}
+	}
+
+	.pre-footer {
+		.contact-us, .latest-post {
+			@include span(4);
+		}
+		.latest-tweets {
+			@include span(4 last);
+		}
+	}
+
+	.footer {
+		.copyright {
+			@include span(4);
+		}
+		.social-links {
+			@include span(isolate 4 at 5);
+		}
+	}
+}

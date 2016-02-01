@@ -1,0 +1,22 @@
+@include breakpoint ($medium) {
+
+	html {
+		font-size: 0.9rem;
+	}
+
+	#burger {
+		display: none;
+		}
+
+	.main-menu {
+		display: block;
+		margin-top: 3.25rem;
+		clear: none;
+		float: right;
+		li {
+			display: inline-block;
+		}
+	}
+
+
+}

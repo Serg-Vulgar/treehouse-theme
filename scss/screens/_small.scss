@@ -1,0 +1,23 @@
+@include breakpoint ($small) {
+
+html {
+	font-size: 0.8rem;
+}
+
+
+
+	.services-list {
+		li {
+			width: span(8);
+		}
+	}
+
+
+	.culture-list {
+		li {
+			width: span(8);
+		}
+	}
+
+}
+
